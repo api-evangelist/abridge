@@ -1,0 +1,131 @@
+aid: abridge
+url: https://raw.githubusercontent.com/api-evangelist/abridge/refs/heads/main/apis.yml
+name: Abridge
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+description: Abridge provides enterprise-grade generative AI for clinical conversations,
+  transforming patient-clinician interactions into contextually aware, clinically useful, and
+  billable AI-generated notes. Its Contextual Reasoning Engine powers ambient documentation
+  embedded directly in the Epic EHR (Abridge Inside), with deployments across more than 100 health
+  systems including Mayo Clinic, UPMC, Kaiser Permanente, Johns Hopkins, and Duke Health. Abridge
+  reaches third-party developers and EHR partners through Epic's Partners and Pals program rather
+  than a public, self-service developer API.
+tags:
+  - Healthcare
+  - Ambient AI
+  - Clinical Documentation
+  - Generative AI
+  - Revenue Cycle
+  - Nursing Documentation
+  - EHR Integration
+  - Epic
+created: '2026-05-23'
+modified: '2026-05-23'
+specificationVersion: '0.19'
+apis: []
+common:
+  - type: Website
+    url: https://www.abridge.com/
+  - type: CustomerHub
+    url: https://hub.abridge.com/
+  - type: Support
+    url: https://support.abridge.com/
+  - type: Press
+    url: https://www.abridge.com/press
+  - type: Blog
+    url: https://www.abridge.com/blog
+  - type: Research
+    url: https://www.abridge.com/research
+  - type: Contact
+    url: https://www.abridge.com/contact
+  - type: Careers
+    url: https://jobs.ashbyhq.com/Abridge
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/abridge-ai
+  - type: Twitter
+    url: https://twitter.com/AbridgeHQ
+  - type: TermsOfService
+    url: https://www.abridge.com/terms
+  - type: PrivacyPolicy
+    url: https://www.abridge.com/privacy
+  - type: Features
+    data:
+      - name: Ambient Clinical Documentation
+        description: Real-time AI-generated clinical notes from patient-clinician conversations.
+      - name: Contextual Reasoning Engine
+        description: Proprietary healthcare AI infrastructure underpinning Abridge's documentation
+          and reasoning products.
+      - name: Abridge Inside
+        description: Direct in-EHR experience embedded into Epic from Haiku to Hyperdrive,
+          delivering ambient documentation inside the existing clinician workflow.
+      - name: Revenue Cycle
+        description: Closes revenue cycle gaps at the point of conversation with coding-ready notes.
+      - name: Nursing Documentation
+        description: AI-powered ambient documentation for nursing teams developed in partnership
+          with Mayo Clinic and Epic.
+      - name: Inpatient Care
+        description: Expansion of ambient documentation into inpatient settings as part of the Epic
+          partnership.
+      - name: Specialty Coverage
+        description: Coverage including Abridge Inside for Emergency Medicine and other specialty
+          workflows.
+  - type: UseCases
+    data:
+      - name: Outpatient Clinical Documentation
+        description: Generating ambient notes during outpatient visits across primary care and
+          specialties.
+      - name: Inpatient Clinical Documentation
+        description: Ambient documentation for inpatient clinicians and care teams.
+      - name: Emergency Medicine Documentation
+        description: Workflow-tuned documentation for emergency departments.
+      - name: Nurse Workflow Support
+        description: Generative AI to reduce nursing documentation burden.
+      - name: Revenue Cycle Capture
+        description: Auto-generated, audit-ready notes that strengthen coding and billing.
+  - type: Customers
+    data:
+      - name: Mayo Clinic
+        description: Health system partner and co-developer of nurse workflow AI.
+      - name: UPMC
+        description: Early enterprise customer for Abridge ambient documentation.
+      - name: Emory Healthcare
+        description: Health system deploying Abridge ambient documentation.
+      - name: Yale New Haven Health
+        description: Enterprise customer.
+      - name: Sutter Health
+        description: Enterprise customer.
+      - name: Kaiser Permanente
+        description: Enterprise customer.
+      - name: Johns Hopkins
+        description: Enterprise customer.
+      - name: Duke Health
+        description: Enterprise customer.
+      - name: 100+ Health Systems
+        description: Deployed across more than 100 U.S. health systems.
+  - type: Integrations
+    data:
+      - name: Epic
+        description: First Pal in Epic's Partners and Pals program and participant in Epic's
+          Workshop co-development program; Abridge Inside is embedded across Epic Haiku and
+          Hyperdrive.
+  - type: Authentication
+    data:
+      - name: No Public Developer API
+        description: Abridge does not publish a public, self-service developer API. Third-party
+          integration for EHR partners runs through Epic's Partners and Pals program; enterprise
+          customer integration is handled through the Abridge Customer Hub and support channels.
+  - type: Compliance
+    data:
+      - name: HIPAA
+        description: HIPAA-compliant handling of protected health information for ambient
+          documentation.
+      - name: Enterprise Security
+        description: Enterprise-grade security controls supporting deployments at large health
+          systems.
+  - type: Recognition
+    data:
+      - name: KLAS Market Leader
+        description: KLAS-recognized Market Leader in Ambient AI in both 2025 and 2026 reports.
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
