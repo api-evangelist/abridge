@@ -4,9 +4,9 @@
     {
       "source": "https://www.abridge.com/blog",
       "feed_url": "https://www.abridge.com/blog",
-      "title": "",
+      "title": "Abridge News Feed",
       "saved": 0,
-      "method": "none"
+      "method": "html-scrape"
     },
     {
       "source": "https://www.abridge.com/press",
@@ -17,5 +17,5 @@
     }
   ],
   "post_count": 0,
-  "fetched": "2026-06-14T20:42:17Z"
+  "fetched": "2026-06-21T17:00:00Z"
 }
