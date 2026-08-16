@@ -31,7 +31,7 @@ tags:
   - EHR Integration
   - Epic
 created: '2026-05-23'
-modified: '2026-05-23'
+modified: '2026-08-15'
 specificationVersion: '0.19'
 apis: []
 common:
@@ -39,6 +39,20 @@ common:
     url: security/abridge-trust-center.yml
   - type: DomainSecurity
     url: security/abridge-domain-security.yml
+  - type: Conformance
+    url: conformance/abridge-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/abridge-lifecycle.yml
+  - type: StatusPage
+    url: https://status.abridge.com/
+  - type: Plans
+    url: plans/abridge-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/abridge-rate-limits.yml
+  - type: LLMsTxt
+    url: llms/abridge-llms.txt
+  - type: GitHubOrganization
+    url: https://github.com/abridgeai
   - type: Website
     url: https://www.abridge.com/
   - type: CustomerHub
@@ -123,12 +137,15 @@ common:
         description: First Pal in Epic's Partners and Pals program and participant in Epic's
           Workshop co-development program; Abridge Inside is embedded across Epic Haiku and
           Hyperdrive.
-  - type: Authentication
+  - type: IntegrationModel
     data:
       - name: No Public Developer API
         description: Abridge does not publish a public, self-service developer API. Third-party
           integration for EHR partners runs through Epic's Partners and Pals program; enterprise
           customer integration is handled through the Abridge Customer Hub and support channels.
+          Retyped from Authentication on 2026-08-15 — this entry documents the ABSENCE of a
+          published authentication scheme, so carrying the canonical Authentication type would
+          have credited Abridge with documented API auth it does not publish.
   - type: Compliance
     data:
       - name: HIPAA
@@ -144,3 +161,30 @@ common:
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
+x-enrichment:
+  date: '2026-08-15'
+  status: minimal
+  artifacts_added: 6
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Abridge ships ambient clinical documentation as an in-EHR end-user product — abridge.com has
+    no developer, API or docs section at all (every /api, /developers and /openapi.json path
+    returns the Webflow 404 page, and the 544-URL sitemap contains none), no api./developer./docs
+    host serves a spec (docs.abridge.com is only a Google Workspace redirect for staff), and the
+    only /.well-known/ 200s on Abridge hosts belong to its vendors Atlassian and SafeBase, not to
+    Abridge; third-party integration is brokered by Epic's Partners and Pals program instead.
+  evidence:
+    - url: https://www.abridge.com/developers
+      status: 404
+    - url: https://www.abridge.com/openapi.json
+      status: 404
+    - url: https://www.abridge.com/.well-known/agent-card.json
+      status: 404
+    - url: http://docs.abridge.com/
+      status: 302
+    - url: https://hub.abridge.com/
+      status: 401
+  checked: '2026-08-15'
