@@ -1,0 +1,46 @@
+generated: '2026-08-15'
+method: probed
+source: https://status.abridge.com/
+status_page:
+  url: https://status.abridge.com/
+  platform: Atlassian Statuspage
+  dns: 9tfv4dgd43br.stspg-customer.com
+  public: false
+  http_status: 302
+  redirects_to: https://status.abridge.com/access/login
+  note: >-
+    Abridge operates a real, Abridge-branded status page (page title "Abridge Status"), but it
+    is a private Statuspage: every path, including the machine-readable /api/v2/status.json and
+    /api/v2/summary.json, 302s to /access/login and returns the login HTML with HTTP 200. The
+    status page exists; its contents are customer-only.
+versioning:
+  policy_published: false
+  scheme: null
+  note: No API versioning policy is published — Abridge publishes no public API.
+deprecation:
+  policy_published: false
+  sunset_header: unknown
+  deprecation_header: unknown
+  note: >-
+    No deprecation or sunset policy found on abridge.com (no /developers, /api or /docs section
+    exists; all return 404). No Deprecation pointer is emitted in apis.yml.
+sla:
+  published: false
+  note: >-
+    No public SLA. Availability commitments would sit inside enterprise agreements; the public
+    legal surface is https://www.abridge.com/terms plus a Business Associate Agreement at
+    https://www.abridge.com/terms/business-associate-agreement.
+changelog:
+  published: false
+  note: >-
+    No dated product or API changelog. The closest public cadence surfaces are the blog
+    (https://www.abridge.com/blog) and press releases (https://www.abridge.com/press).
+deprecated_operations: []
+evidence:
+  - url: https://status.abridge.com/
+    http_status: 302
+  - url: https://status.abridge.com/api/v2/summary.json
+    http_status: 200
+    note: 200 is the login page HTML, not the Statuspage JSON API.
+  - url: https://www.abridge.com/developers
+    http_status: 404

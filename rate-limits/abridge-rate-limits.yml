@@ -1,0 +1,21 @@
+generated: '2026-08-15'
+method: searched
+source: https://www.abridge.com/
+limit_count: 0
+limits: []
+headers: []
+retry_after: unknown
+exhaustion_status: null
+note: >-
+  No rate limits are published because no public API is published. Contract discovery found no
+  OpenAPI, GraphQL SDL, MCP endpoint or agent card on any Abridge host, and abridge.com has no
+  developer, API or documentation section (all 404). Any limits that exist are defined inside
+  enterprise agreements and the Epic integration, neither of which is public. Honest zero.
+evidence:
+  - url: https://www.abridge.com/api
+    http_status: 404
+  - url: https://www.abridge.com/developers
+    http_status: 404
+  - url: https://www.abridge.com/openapi.json
+    http_status: 404
+    note: Webflow 404 page, not a spec.

@@ -1,0 +1,176 @@
+generated: '2026-08-15'
+method: probed
+source: live HTTPS probes of every Abridge host named in apis.yml
+note: >-
+  Every /.well-known/ path on the hosts Abridge itself operates (abridge.com,
+  www.abridge.com, hub.abridge.com) returned 404. The Webflow origin answers those
+  paths with an 88-byte "Invalid .well-known request" HTML page, which is an honest
+  404, not a document. Two hosts DID return 200 documents, and BOTH belong to
+  third-party vendors rather than to Abridge: status.abridge.com serves Atlassian
+  Statuspage's own security.txt (Canonical https://www.atlassian.com/.well-known/security.txt,
+  Contact security@atlassian.com), and trust.abridge.com serves SafeBase's OAuth /
+  OpenID metadata for the SafeBase MCP server (issuer https://app.safebase.io/api/mcp).
+  Neither is an Abridge-published document, so NO WellKnown, SecurityTxt or MCPServer
+  pointer is emitted in apis.yml. Recording the absence is the finding.
+hosts_probed:
+  - www.abridge.com
+  - abridge.com
+  - hub.abridge.com
+  - support.abridge.com
+  - trust.abridge.com
+  - status.abridge.com
+paths:
+  - host: www.abridge.com
+    path: /.well-known/security.txt
+    status: 404
+    file: null
+  - host: www.abridge.com
+    path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - host: www.abridge.com
+    path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - host: www.abridge.com
+    path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - host: www.abridge.com
+    path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - host: www.abridge.com
+    path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - host: www.abridge.com
+    path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - host: www.abridge.com
+    path: /.well-known/agent.json
+    status: 404
+    file: null
+  - host: abridge.com
+    path: /.well-known/security.txt
+    status: 404
+    file: null
+  - host: abridge.com
+    path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - host: abridge.com
+    path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - host: abridge.com
+    path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - host: abridge.com
+    path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - host: abridge.com
+    path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - host: abridge.com
+    path: /.well-known/agent.json
+    status: 404
+    file: null
+  - host: hub.abridge.com
+    path: /.well-known/security.txt
+    status: 404
+    file: null
+  - host: hub.abridge.com
+    path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - host: hub.abridge.com
+    path: /.well-known/agent.json
+    status: 404
+    file: null
+  - host: hub.abridge.com
+    path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - host: support.abridge.com
+    path: /.well-known/security.txt
+    status: 404
+    file: null
+    note: Zendesk-hosted help center; 403 Cloudflare challenge on the root, 404 on well-known.
+  - host: support.abridge.com
+    path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - host: trust.abridge.com
+    path: /.well-known/security.txt
+    status: 404
+    file: null
+  - host: trust.abridge.com
+    path: /.well-known/openid-configuration
+    status: 200
+    file: null
+    owner: safebase.io
+    provider_owned: false
+    note: >-
+      200 application/json, but the document names issuer https://app.safebase.io/api/mcp
+      and service_documentation https://docs.safebase.io/mcp. This is SafeBase's OAuth
+      metadata for the SafeBase trust-center MCP server, served under Abridge's CNAME
+      (abridge.portals.safebase.io). Not an Abridge-published document.
+  - host: trust.abridge.com
+    path: /.well-known/oauth-authorization-server
+    status: 200
+    file: null
+    owner: safebase.io
+    provider_owned: false
+    note: Identical SafeBase document to /.well-known/openid-configuration.
+  - host: trust.abridge.com
+    path: /.well-known/oauth-protected-resource
+    status: 200
+    file: null
+    owner: safebase.io
+    provider_owned: false
+    note: 'resource: https://app.safebase.io/api/mcp — SafeBase''s protected resource, not Abridge''s.'
+  - host: trust.abridge.com
+    path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - host: trust.abridge.com
+    path: /.well-known/agent.json
+    status: 404
+    file: null
+  - host: status.abridge.com
+    path: /.well-known/security.txt
+    status: 200
+    file: null
+    owner: atlassian.com
+    provider_owned: false
+    note: >-
+      200 text/plain, PGP-signed, but it is Atlassian Statuspage's security.txt —
+      Canonical https://www.atlassian.com/.well-known/security.txt, Contact
+      security@atlassian.com, Policy https://www.atlassian.com/trust/security/report-a-vulnerability.
+      Abridge's status page is a Statuspage tenant (9tfv4dgd43br.stspg-customer.com), so this
+      file is the vendor's, not Abridge's. No SecurityTxt pointer emitted.
+  - host: status.abridge.com
+    path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - host: status.abridge.com
+    path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - host: status.abridge.com
+    path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - host: status.abridge.com
+    path: /.well-known/agent.json
+    status: 404
+    file: null
+summary:
+  provider_owned_documents: 0
+  vendor_owned_documents: 4
+  pointer_emitted: false

@@ -1,0 +1,26 @@
+generated: '2026-08-15'
+method: searched
+source: https://www.abridge.com/
+plan_count: 0
+currency: null
+plans: []
+note: >-
+  Abridge publishes no pricing, plans or tiers of any kind. https://www.abridge.com/pricing
+  returns 404, and the site's own sitemap.xml (544 URLs) contains no pricing, plans, quote or
+  cost page. Abridge sells enterprise contracts to health systems through a demo/contact motion
+  (https://www.abridge.com/contact), and its in-EHR product reaches clinicians through Epic
+  rather than through any self-service purchase path. This is an honest zero, not a gap in the
+  probe.
+sales_model: enterprise-contact-sales
+self_service: false
+free_tier: false
+trial: false
+evidence:
+  - url: https://www.abridge.com/pricing
+    http_status: 404
+  - url: https://www.abridge.com/sitemap.xml
+    http_status: 200
+    note: 544 URLs, zero pricing/plans pages.
+  - url: https://www.abridge.com/contact
+    http_status: 200
+    note: HubSpot contact form; the only commercial entry point published.

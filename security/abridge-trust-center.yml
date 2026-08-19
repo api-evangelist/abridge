@@ -1,14 +1,82 @@
-generated: '2026-07-11'
+generated: '2026-08-15'
 method: searched
 probe: true
 source: https://trust.abridge.com/
 url: https://trust.abridge.com/
+platform: SafeBase
+platform_note: >-
+  trust.abridge.com is a SafeBase-hosted trust portal (CNAME abridge.portals.safebase.io).
+  The content — certifications, controls, subprocessors, document library — is Abridge's;
+  the /.well-known/ OAuth documents served on that host are SafeBase's and are recorded as
+  vendor-owned in well-known/abridge-well-known.yml.
+access: public
 certifications:
-- SOC 2
-- HIPAA
+  - name: SOC 2 Type 1
+    status: certified
+  - name: SOC 2 Type 2
+    status: certified
+  - name: HIPAA
+    status: compliant
+  - name: CCPA
+    status: compliant
+  - name: TX-RAMP
+    status: certified
+  - name: WCAG
+    status: conformant
+documents:
+  - name: SOC 2 Report
+    access: on-request
+  - name: Security Whitepaper
+    access: on-request
+  - name: Network Diagram
+    access: on-request
+  - name: Business Continuity / Disaster Recovery Policy
+    access: on-request
+controls:
+  - Audit logging
+  - Data security
+  - Multi-factor authentication
+  - Application penetration testing
+  - Network penetration testing
+  - Code analysis
+  - Secure development training
+  - AI training data and bias assessment
+  - AI security
+  - AI monitoring
+  - Access monitoring
+  - Certificates of destruction
+  - Data asset classification
+  - Anti-DDoS
+  - Anti-malware
+  - Disk encryption
+  - Endpoint detection and response
+  - Firewall
+  - Security information and event management (SIEM)
+  - Vulnerability and patch management
+  - Employee security training
+subprocessors:
+  - Google Cloud
+  - OpenAI
+  - Zendesk
+  - Amplitude
+  - Sentry
+vulnerability_disclosure:
+  published: false
+  note: >-
+    The trust center describes an internal vulnerability and patch management program but
+    publishes no public reporting channel, responsible-disclosure policy or bug bounty.
+    https://www.abridge.com/security, /trust, /responsible-disclosure and
+    /vulnerability-disclosure all return 404; hackerone.com/abridge and bugcrowd.com/abridge
+    both return 404; no Abridge-served security.txt exists (see well-known/).
 evidence:
-- source: https://trust.abridge.com/
-  keywords:
-  - soc 2
-  - hipaa
-  - trust center
+  - source: https://trust.abridge.com/
+    http_status: 200
+    keywords:
+      - soc 2 type 1
+      - soc 2 type 2
+      - hipaa
+      - ccpa
+      - tx-ramp
+      - wcag
+      - penetration testing
+      - subprocessors

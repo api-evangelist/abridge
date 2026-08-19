@@ -1,0 +1,98 @@
+generated: '2026-08-15'
+method: searched
+source: https://trust.abridge.com/
+note: >-
+  Abridge publishes no machine-readable API contract (no OpenAPI, AsyncAPI, GraphQL SDL or
+  Postman collection was found on any Abridge host — see x-coverage in apis.yml), so every
+  API-technical conformance assertion below is derived from the ABSENCE of a contract rather
+  than from one. The compliance assertions are read from the public SafeBase trust center.
+standards:
+  - id: soc2-type1
+    name: SOC 2 Type 1
+    category: compliance
+    conforms: true
+    evidence: Listed as a certification on https://trust.abridge.com/ (report available on request).
+  - id: soc2-type2
+    name: SOC 2 Type 2
+    category: compliance
+    conforms: true
+    evidence: Listed as a certification on https://trust.abridge.com/ (report available on request).
+  - id: hipaa
+    name: HIPAA
+    category: regulation
+    conforms: true
+    evidence: >-
+      Listed on https://trust.abridge.com/; Abridge also publishes a Business Associate
+      Agreement at https://www.abridge.com/terms/business-associate-agreement.
+  - id: ccpa
+    name: CCPA
+    category: regulation
+    conforms: true
+    evidence: Listed on https://trust.abridge.com/ and covered by https://www.abridge.com/privacy.
+  - id: tx-ramp
+    name: TX-RAMP
+    category: compliance
+    conforms: true
+    evidence: Listed as a certification on https://trust.abridge.com/.
+  - id: wcag
+    name: WCAG
+    category: accessibility
+    conforms: true
+    evidence: Listed as a conformance claim on https://trust.abridge.com/.
+  - id: hitrust
+    name: HITRUST CSF
+    category: compliance
+    conforms: false
+    evidence: Not named anywhere on https://trust.abridge.com/ (0 matches in page source).
+  - id: iso-27001
+    name: ISO/IEC 27001
+    category: compliance
+    conforms: false
+    evidence: Not named anywhere on https://trust.abridge.com/ (0 matches in page source).
+  - id: fedramp
+    name: FedRAMP
+    category: compliance
+    conforms: false
+    evidence: Not named on https://trust.abridge.com/; only the state-level TX-RAMP is claimed.
+  - id: gdpr
+    name: GDPR
+    category: regulation
+    conforms: false
+    evidence: >-
+      Not claimed on the trust center. Abridge's deployments and published customers are
+      United States health systems.
+  - id: fhir
+    name: HL7 FHIR
+    category: interoperability
+    conforms: unknown
+    evidence: >-
+      Abridge integrates with Epic as the first Pal in Epic's Partners and Pals program, but
+      publishes no first-party FHIR capability statement, implementation guide or endpoint,
+      so no conformance claim can be verified.
+  - id: oauth2
+    name: OAuth 2.0
+    category: authorization
+    conforms: false
+    evidence: >-
+      No Abridge-served /.well-known/oauth-authorization-server or /.well-known/openid-configuration
+      exists (the only 200s are SafeBase's, on the vendor-hosted trust portal — see well-known/).
+  - id: oidc
+    name: OpenID Connect
+    category: authentication
+    conforms: false
+    evidence: No Abridge-served OpenID discovery document on any probed host.
+  - id: rfc9457
+    name: RFC 9457 Problem Details
+    category: errors
+    conforms: unknown
+    evidence: No public API contract to evaluate.
+  - id: rfc8594
+    name: RFC 8594 Sunset header
+    category: lifecycle
+    conforms: unknown
+    evidence: No public API contract or deprecation policy to evaluate.
+  - id: idempotency
+    name: Idempotency keys
+    category: conventions
+    conforms: unknown
+    evidence: No public API contract to evaluate.
